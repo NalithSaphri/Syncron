@@ -34,5 +34,10 @@ namespace Syncron
             Origin.Rotation.z += TorqueSpeed;
             Origin.Rotation.w += TorqueSpeed;
         }
+
+        internal class Raycast
+        {
+
+        }
     }
 }
