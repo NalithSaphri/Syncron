@@ -29,12 +29,10 @@ namespace Syncron
             Quaternion temp = Quaternion.ToQuaternion(TargetDirection);
             Torque = new Quaternion((temp.x + Origin.Rotation.x) / 2, (temp.y + Origin.Rotation.y) / 2, 
                 (temp.z + Origin.Rotation.z) / 2, (temp.w + Origin.Rotation.w) / 2);
-
-        }
-
-        public static float GetSpeed()
-        {
-            return Speed;
+            Origin.Rotation.x += TorqueSpeed;
+            Origin.Rotation.y += TorqueSpeed;
+            Origin.Rotation.z += TorqueSpeed;
+            Origin.Rotation.w += TorqueSpeed;
         }
     }
 }
